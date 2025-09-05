@@ -1,0 +1,109 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --btn: #111827;
+  --btn-ink: #ffffff;
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(1200px 800px at 20% -10%, #eef2ff 0%, transparent 60%),
+              radial-gradient(1000px 600px at 120% 110%, #e0f2fe 0%, transparent 60%),
+              var(--bg);
+  color: var(--ink);
+  font: 16px/1.45 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(960px, 95vw);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px 20px 24px;
+}
+
+.head {
+  text-align: center;
+  padding: 8px 8px 12px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 16px;
+}
+
+.head h1 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: .2px;
+}
+
+.sub {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.stage-wrap {
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+#stage {
+  display: block;
+  background:
+    linear-gradient(transparent 39px, var(--line) 40px) 0 0 / 100% 40px,
+    linear-gradient(90deg, transparent 39px, var(--line) 40px) 0 0 / 40px 100%,
+    #fafafa;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  max-width: 100%;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid #0f172a;
+  background: var(--btn);
+  color: var(--btn-ink);
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: .2px;
+  cursor: pointer;
+  transition: transform .04s ease, box-shadow .15s ease, opacity .15s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,.08);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 860px) {
+  .card { padding: 16px; }
+  .head h1 { font-size: 20px; }
+  #stage { width: 100%; height: auto; }
+}
