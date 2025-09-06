@@ -4,7 +4,7 @@ A simple game where you click on bubbles to shoot arrows.
 
 ## Live Demo
 
-You can play the game here: https://bubbleappassignment.vercel.app/
+You can play game here: https://bubbleappassignment.vercel.app/
 
 ## How to play
 
